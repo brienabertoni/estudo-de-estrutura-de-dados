@@ -12,24 +12,6 @@ Consolidar fundamentos de estrutura de dados — não só "decorando algoritmo",
 
 ---
 
-## 📁 Estrutura do repositório
-
-```
-.
-├── facil/              # Exercícios 01–10 · listas, dicts, sets, pilhas e filas
-│   ├── 01_ips_unicos.py
-│   ├── 02_contar_status_http.py
-│   └── ...
-├── intermediario/       # Exercícios 11–20 · listas encadeadas, árvores, heaps, hashing
-│   ├── 11_ciclo_tarefas.py
-│   └── ...
-├── dificil/             # Exercícios 21–30 · grafos, tries, Union-Find, Bloom Filter
-│   ├── 21_ordem_migrations.py
-│   └── ...
-├── tests/                # Testes (assert / pytest) de cada solução
-└── README.md
-```
-
 > 💡 Cada arquivo de exercício contém: o enunciado resumido em comentário, a solução, e a complexidade de tempo/espaço anotada ao final.
 
 ---
