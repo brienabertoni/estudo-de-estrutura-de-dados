@@ -1,92 +1,108 @@
-# 40 Problemas de Engenharia de Software
+# 🧩 Estrutura de Dados em Python — Exercícios Aplicados
 
-Resoluções pessoais dos 40 desafios práticos de engenharia de software, baseados em situações reais do dia a dia (bugs, arquitetura, banco de dados, testes, APIs, DevOps, segurança e boas práticas).
+Resoluções dos **30 exercícios de estrutura de dados** com foco no dia a dia de um(a) engenheiro(a) de software: logs, filas de mensagens, caches, dependências de deploy, rate limiting, arquitetura de microsserviços e mais.
 
-Estudando 1 exercício por dia, com foco em entender o problema antes de sair codando.
-
-## Como está organizado
-
-Cada problema tem sua própria pasta, numerada, com:
-
-```
-01-deteccao-ciclos-grafo/
-├── README.md        # contexto, desafio e anotações do meu processo
-└── solucao.*         # código da solução
-```
-
-O `README.md` de cada pasta traz: o problema original, minhas anotações de raciocínio, decisões tomadas e o que eu pesquisei/aprendi no caminho — o objetivo é documentar o processo, não só entregar a resposta final.
-
-## Progresso
-
-### Lógica & Algoritmos
-- [ ] 01 (Pleno) — Detecção de ciclos em grafo
-- [ ] 02 (Pleno) — Rate limiter com janela deslizante
-- [ ] 03 (Júnior) — Retry com backoff exponencial
-- [ ] 04 (Júnior) — Compressão de logs (RLE)
-
-### Debug & Troubleshooting
-- [ ] 05 (Pleno) — Memory leak em aplicação Node.js
-- [ ] 06 (Pleno) — Condição de corrida em endpoint de pagamento
-- [ ] 07 (Júnior) — N+1 Query Problem
-- [ ] 08 (Pleno) — Deadlock entre duas transações
-- [ ] 09 (Júnior) — Erro silencioso em pipeline assíncrono
-- [ ] 10 (Júnior) — Vazamento de credenciais via variável de ambiente
-
-### Arquitetura de Software
-- [ ] 11 (Pleno) — Refatoração: monolito para módulos
-- [ ] 12 (Pleno) — Circuit Breaker
-- [ ] 13 (Pleno) — Design de API RESTful versionada
-- [ ] 14 (Pleno) — Event Sourcing simples
-- [ ] 15 (Pleno) — Cache com invalidação inteligente
-- [ ] 16 (Pleno) — Padrão Saga para transações distribuídas
-
-### Banco de Dados
-- [ ] 17 (Pleno) — Modelagem de hierarquia de categorias
-- [ ] 18 (Pleno) — Migração de banco sem downtime
-- [ ] 19 (Pleno) — Índices compostos e cobertura de queries
-- [ ] 20 (Júnior) — Soft delete com auditoria
-
-### Testes & Qualidade
-- [ ] 21 (Pleno) — Testes de integração com banco real
-- [ ] 22 (Pleno) — Contract testing (produtor/consumidor)
-- [ ] 23 (Pleno) — Teste de carga com identificação de gargalo
-- [ ] 24 (Júnior) — TDD em cálculo de frete
-
-### APIs & Integrações
-- [ ] 25 (Pleno) — Webhook com garantia de entrega
-- [ ] 26 (Pleno) — OAuth2 com refresh token
-- [ ] 27 (Pleno) — Integração com API de terceiros instável
-- [ ] 28 (Pleno) — GraphQL com N+1 resolvido via DataLoader
-
-### DevOps & Infraestrutura
-- [ ] 29 (Júnior) — Dockerização com multi-stage build
-- [ ] 30 (Pleno) — Pipeline CI/CD com deploy blue-green
-- [ ] 31 (Pleno) — Observabilidade: logs, métricas e traces
-- [ ] 32 (Pleno) — Health checks e graceful shutdown
-
-### Segurança
-- [ ] 33 (Júnior) — Prevenção de SQL Injection
-- [ ] 34 (Pleno) — RBAC (autorização baseada em papéis)
-- [ ] 35 (Júnior) — Proteção contra ataques de enumeração
-
-### Boas Práticas & Código Limpo
-- [ ] 36 (Júnior) — Refatoração de code smells
-- [ ] 37 (Pleno) — DDD tático
-- [ ] 38 (Pleno) — Feature flags com controle granular
-- [ ] 39 (Júnior) — Documentação viva com OpenAPI
-- [ ] 40 (Júnior/Pleno) — Revisão de Pull Request
-
-## Método de estudo
-
-1. Ler o contexto e o desafio, sem consultar solução pronta
-2. Tentar resolver sozinha (~30-40min), pesquisando o que for necessário
-3. Comparar com abordagens da comunidade / discutir alternativas
-4. Documentar decisões e aprendizados no README da pasta
-
-## Stack
-
-Linguagem livre por exercício — priorizando a ferramenta mais adequada ao problema (ex: SQL puro para os de banco, Docker para os de DevOps).
+Cada exercício simula um cenário real (não é um "LeetCode genérico") e é resolvido em **Python puro**, com a estrutura de dados apropriada justificada no processo.
 
 ---
 
-Lista original: *40 Problemas de Engenharia de Software para Programadores Júnior e Pleno*
+## 🎯 Objetivo
+
+Consolidar fundamentos de estrutura de dados — não só "decorando algoritmo", mas entendendo **por que** cada estrutura resolve melhor cada tipo de problema, com o raciocínio documentado exercício a exercício.
+
+---
+
+## 📁 Estrutura do repositório
+
+```
+.
+├── facil/              # Exercícios 01–10 · listas, dicts, sets, pilhas e filas
+│   ├── 01_ips_unicos.py
+│   ├── 02_contar_status_http.py
+│   └── ...
+├── intermediario/       # Exercícios 11–20 · listas encadeadas, árvores, heaps, hashing
+│   ├── 11_ciclo_tarefas.py
+│   └── ...
+├── dificil/             # Exercícios 21–30 · grafos, tries, Union-Find, Bloom Filter
+│   ├── 21_ordem_migrations.py
+│   └── ...
+├── tests/                # Testes (assert / pytest) de cada solução
+└── README.md
+```
+
+> 💡 Cada arquivo de exercício contém: o enunciado resumido em comentário, a solução, e a complexidade de tempo/espaço anotada ao final.
+
+---
+
+## ✅ Progresso
+
+### Nível Fácil (1–10)
+- [x] 01 — Deduplicar IPs suspeitos de um log de acesso
+- [ ] 02 — Contar status codes de uma janela de requisições
+- [ ] 03 — Validar chaves balanceadas em um arquivo de configuração
+- [ ] 04 — Fila de processamento de tickets de suporte
+- [ ] 05 — Segunda maior latência em uma lista de métricas
+- [ ] 06 — Inverter o histórico de commits
+- [ ] 07 — Comparar chaves entre dois arquivos de configuração
+- [ ] 08 — Agrupar usuários por papel (role)
+- [ ] 09 — Remover e-mails duplicados de uma lista de notificação
+- [ ] 10 — Pilha de "undo" para um editor de configuração
+
+### Nível Intermediário (11–20)
+- [ ] 11 — Detectar ciclo em uma cadeia de tarefas dependentes
+- [ ] 12 — Cache LRU para respostas de uma API externa
+- [ ] 13 — Tabela hash própria para índice de sessões
+- [ ] 14 — Ordenar deploys por timestamp com merge sort
+- [ ] 15 — Busca binária em versões de API (semver)
+- [ ] 16 — Fila de prioridade para triagem de alertas
+- [ ] 17 — Achatar uma estrutura de permissões aninhada
+- [ ] 18 — Árvore binária de busca para índice de usuários
+- [ ] 19 — Detectar tickets duplicados por similaridade
+- [ ] 20 — Rate limiter de janela fixa por usuário
+
+### Nível Difícil — viável para jr (21–30)
+- [ ] 21 — Ordem de execução de migrations com dependências
+- [ ] 22 — Detectar dependência circular entre microsserviços
+- [ ] 23 — Cache LFU para um serviço de recomendação
+- [ ] 24 — Autocomplete de comandos para uma CLI interna
+- [ ] 25 — Caminho mais curto entre serviços em uma arquitetura
+- [ ] 26 — Rate limiter de janela deslizante
+- [ ] 27 — Balanceador de carga round-robin ponderado
+- [ ] 28 — Deduplicação aproximada de eventos em stream (Bloom Filter)
+- [ ] 29 — Agrupar servidores em clusters de rede (Union-Find)
+- [ ] 30 — Fila de mensagens com prioridade, retry e backoff
+
+**Progresso geral:** 1 / 30 ✅
+
+---
+
+## 🧠 Estruturas de dados cobertas
+
+`list` · `set` · `dict` · `deque` · pilha · fila · lista encadeada · árvore binária de busca · heap (`heapq`) · tabela hash própria · trie · grafo (BFS/DFS/topológica) · Union-Find · Bloom Filter
+
+---
+
+## ▶️ Como rodar
+
+```bash
+# Rodar um exercício específico
+python3 facil/01_ips_unicos.py
+
+# Rodar os testes (se estiver usando pytest)
+pytest tests/
+```
+
+---
+
+## 🛠️ Tecnologias
+
+- Python 3
+- `collections` (deque, defaultdict, Counter, OrderedDict)
+- `heapq`
+- `pytest` (testes)
+
+---
+
+## 👩‍💻 Sobre
+
+Repositório de estudo mantido como parte da preparação para vagas júnior de **backend/segurança**, com foco em fundamentos sólidos de estrutura de dados aplicados a problemas reais de engenharia.
