@@ -2,7 +2,7 @@
 
 Resoluções dos **30 exercícios de estrutura de dados** com foco no dia a dia de um(a) engenheiro(a) de software: logs, filas de mensagens, caches, dependências de deploy, rate limiting, arquitetura de microsserviços e mais.
 
-Cada exercício simula um cenário real (não é um "LeetCode genérico") e é resolvido em **Python puro**, com a estrutura de dados apropriada justificada no processo.
+Cada exercício simula um cenário real e é resolvido em **Python puro**, com a estrutura de dados apropriada justificada no processo.
 
 ---
 
@@ -103,6 +103,3 @@ pytest tests/
 
 ---
 
-## 👩‍💻 Sobre
-
-Repositório de estudo mantido como parte da preparação para vagas júnior de **backend/segurança**, com foco em fundamentos sólidos de estrutura de dados aplicados a problemas reais de engenharia.
